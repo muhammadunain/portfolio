@@ -60,7 +60,7 @@ const ProjectPage = () => {
             }
            </div>
         </div>
-        <h2 className="text-3xl font-base mb-4">More Shots</h2>
+        <h2 className="text-3xl font-base mb-4">More work</h2>
         <motion.div
           className="w-full min-h-[60vh] px-4 py-6 md:px-14 md:py-6"
           initial={{ opacity: 0, y: 40 }}
