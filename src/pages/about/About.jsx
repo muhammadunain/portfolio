@@ -338,54 +338,84 @@ const ProfileSection = () => {
 											<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 												{[
 													{
-														name: "Figma",
-														subtitle: "Interface Design Tool",
-														logo: "/skills/figma.png",
+														name: "Jira",
+														subtitle: "Agile project & issue tracking",
+														logo: "https://img.icons8.com/color/48/jira.png",
 													},
 													{
-														name: "Photoshop",
-														subtitle: "Image Editing",
-														logo: "/skills/photoshop.png",
+														name: "Confluence",
+														subtitle: "Team documentation & wiki",
+														logo: "https://img.icons8.com/color/48/confluence--v2.png",
 													},
 													{
-														name: "Illustrator",
-														subtitle: "Vector Graphics",
-														logo: "/skills/illustrator.png",
+														name: "Trello",
+														subtitle: "Visual task management",
+														logo: "https://img.icons8.com/color/48/trello.png",
 													},
 													{
-														name: "Webflow",
-														subtitle: "No-Code Development",
-														logo: "/skills/webflow.png",
+														name: "React",
+														subtitle: "UI library for building apps",
+														logo: "https://img.icons8.com/plasticine/100/react.png",
+													},
+													{
+														name: "Next.js",
+														subtitle: "Full-stack React framework",
+														logo: "/skills/nextjs.png",
+													},
+													{
+														name: "Supabase",
+														subtitle: "Open-source Firebase alternative",
+														logo: "https://img.icons8.com/fluency/48/supabase.png",
+													},
+													{
+														name: "Airtable",
+														subtitle: "Database meets spreadsheet",
+														logo: "https://img.icons8.com/stickers/100/airtable.png",
+													},
+													{
+														name: "Softr",
+														subtitle: "No-code apps on Airtable",
+														logo: "https://cdn.prod.website-files.com/6772e8855f7859bc8df95c78/67a8cb58af31ced4a0dcda4c_Logo.svg",
 													},
 													{
 														name: "Framer",
-														subtitle: "No-Code & Prototyping",
-														logo: "/skills/framermotion.png",
+														subtitle: "Design to website builder",
+														logo: "https://img.icons8.com/plumpy/50/framer-logo.png",
 													},
 													{
-														name: "ChatGPT",
-														subtitle: "AI Assistance",
+														name: "Zapier",
+														subtitle: "Connect apps & automate workflows",
+														logo: "https://img.icons8.com/fluency/48/zapier.png",
+													},
+													{
+														name: "Notion",
+														subtitle: "Docs, notes & knowledge base",
+														logo: "/skills/notion.png",
+													},
+													{
+														name: "Salesforce",
+														subtitle: "CRM & customer platform",
+														logo: "https://img.icons8.com/color/48/salesforce.png",
+													},
+													{
+														name: "Make.com",
+														subtitle: "Visual automation platform",
+														logo: "https://images.ctfassets.net/un655fb9wln6/1k5wBPhbu5kXiaYlFWgEJE/b590772959bd510e64cf230ef37bba3e/Make-Logo-RGB.svg",
+													},
+													{
+														name: "Flowise",
+														subtitle: "Visual tool for AI workflows",
+														logo: "/skills/Logo.png",
+													},
+													{
+														name: "LangChain",
+														subtitle: "Framework for AI applications",
+														logo: "/skills/langchain.svg",
+													},
+													{
+														name: "OpenAI APIs",
+														subtitle: "GPT, embeddings & AI tools",
 														logo: "/skills/chatgpt.png",
-													},
-													{
-														name: "Midjourney",
-														subtitle: "AI Image Generation",
-														logo: "/skills/midjourney.png",
-													},
-													{
-														name: "DeepSeek",
-														subtitle: "AI Assistance",
-														logo: "/skills/deepseek.png",
-													},
-													{
-														name: "Lovable",
-														subtitle: "AI Code Completion",
-														logo: "/skills/lovable.png",
-													},
-													{
-														name: "Cursor",
-														subtitle: "AI-Powered Code Editor",
-														logo: "/skills/cursor.png",
 													},
 												].map((tool, idx) => (
 													<div

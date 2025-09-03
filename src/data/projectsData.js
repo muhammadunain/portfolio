@@ -77,9 +77,18 @@ const projectsData = [
   {
     id: 'enerlytics',
     src: '/projects/enerlytics.jpg',
-    title: 'Enerlytics – Smart Energy Dashboard',
-    description: 'An energy analytics platform UI that helps users visualize consumption trends, optimize usage, and monitor renewable sources.',
+    title: 'Enerlytics - Energy Management',
+    description: 'An intelligent platform to monitor, analyze, and optimize energy usage for smarter efficiency and lower costs.',
     images: ['/projects/enerlytics.jpg'],
+    link:'https://enerlytics.hellorovamo.com/'
+  },
+  {
+    id: 'equity-vantage',
+    src: '/projects/equity vantage.jpg',
+    title: 'Equity Vantage - Investment Potential',
+    description: 'Strategic investment management and comprehensive financial advisory services tailored for institutional investors.',
+    images: ['/projects/equity vantage.jpg'],
+    link:'https://fundmgmnt.netlify.app/'
   },
   {
     id: 'aqua',
@@ -90,13 +99,7 @@ const projectsData = [
   },
   
   
-  {
-    id: 'equity-vantage',
-    src: '/projects/equity vantage.jpg',
-    title: 'Equity Vantage – Investment Insights Platform',
-    description: 'A clean UI for tracking stock equity performance and investment insights. Offers data visualizations and smart portfolio management tools.',
-    images: ['/projects/equity vantage.jpg'],
-  },
+  
 
 
   
