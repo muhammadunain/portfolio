@@ -13,18 +13,18 @@ const GallerySection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7,delay:'0.4', ease: 'easeOut' }}
     >
-      <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
         {projectsData.map((project) => (
           <div
             key={project.id}
-            className="relative rounded-xl overflow-hidden shadow-lg group hover:scale-[1.01] transition-transform duration-300 cursor-pointer"
+            className="relative rounded-xl  overflow-hidden shadow-lg group hover:scale-[1.01] transition-transform duration-300 cursor-pointer"
           >
             {/* Image */}
             <img
             onClick={() => navigate(`/work/project/${project.id}`)}
               src={project.src}
               alt={project.title}
-              className="w-full h-82 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full  object-fit group-hover:scale-105 transition-transform duration-300"
             />
 
             {/* Glass Title - Hidden until hover */}

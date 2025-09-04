@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <div
-      className={`px-4 py-6 md:px-16 md:py-6 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
+      className={`px-8 py-6  md:py-6 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
         }`}
     >
       <nav className="flex justify-between items-center text-white">

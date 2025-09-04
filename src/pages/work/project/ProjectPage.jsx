@@ -36,11 +36,11 @@ const ProjectPage = () => {
           &larr; Back
         </button>
         <h1 className="text-3xl md:text-3xl font-base mb-6 md:mb-10">{project.title}</h1>
-        <div className="mb-8">
+        <div className="mb-16">
           <img src={project.images[0]} alt={project.title} className="w-full rounded-xl shadow-md" />
         </div>
-        <div className="mb-12 w-full flex items-center justify-between">
-          <p className="text-lg leading-relaxed text-gray-300 text-left max-w-2xl">{project.description}</p>
+        <div className="mb-12 w-full flex items-center justify-between ">
+          <p className="text-lg leading-relaxed text-gray-300 mb-10 text-left max-w-2xl">{project.description}</p>
            <div className='flex gap-2'>
             {project.link&&
 
@@ -60,7 +60,7 @@ const ProjectPage = () => {
             }
            </div>
         </div>
-        <h2 className="text-3xl font-base mb-4">More work</h2>
+        <h2 className="text-3xl font-base mb-4">More Work</h2>
         <motion.div
           className="w-full min-h-[60vh] px-4 py-6 md:px-14 md:py-6"
           initial={{ opacity: 0, y: 40 }}

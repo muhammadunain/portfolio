@@ -1,12 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Circle } from 'lucide-react';
 import PulseDot from '../../../components/Dot';
 
 const Section1 = () => {
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  
+  const roles = [
+    "Product Manager Business Analyst",
+    "UX Strategist",
+    "MVP Builder and AI Integration Lead",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 2500); // Change every 2.5 seconds
+
+    return () => clearInterval(interval);
+  }, [roles.length]);
+
   return (
     <motion.section
-      className="px-4 py-6 md:px-16 md:py-6 text-white flex flex-col justify-center"
+      className="px-8 py-6  md:py-6 text-white flex flex-col justify-center"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -16,14 +32,28 @@ const Section1 = () => {
         {/* Left Text */}
         <div className="space-y-8">
           <h1 className="text-4xl md:text-5xl font-base leading-tight">
-            I’m Murtaza.<br />
-            Product Designer.<br />
-            No-Code Expert.
+            I'm Murtaza.<br />
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentRoleIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ 
+                  duration: 0.5,
+                  ease: "easeInOut"
+                }}
+                className="inline-block"
+              >
+                {roles[currentRoleIndex]}
+              </motion.span>
+            </AnimatePresence>
+           
           </h1>
 
           <ul className="space-y-2 text-lg md:text-sm font-base">
-            <li>• 13+ Years in Product Design</li>
-            <li>• Webflow & Framer Partner</li>
+            <li>• Years in product management, UX design, and business analysis</li>
+            <li>• projects delivered across fintech, healthcare, SaaS, logistics, and martech</li>
           </ul>
         </div>
 

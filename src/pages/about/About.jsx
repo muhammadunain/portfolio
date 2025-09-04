@@ -28,10 +28,6 @@ const achievements = [
 		label:
 			"projects delivered across fintech, healthcare, SaaS, logistics, and martech",
 	},
-	// {
-	// 	number: "$200K+",
-	// 	label: "earned via Upwork with long-term contracts and repeat clients",
-	// },
 	{
 		number: "8",
 		label:
@@ -40,26 +36,27 @@ const achievements = [
 	{
 		number: "7",
 		label:
-			" real-world AI use cases delivered including EHR, automation, and real estate workflows",
+			"real-world AI use cases delivered including EHR, automation, and real estate workflows",
 	},
 ];
 
 const aboutSections = [
 	{ id: "expertise", label: "Expertise" },
 	{ id: "tools", label: "Tool Stack" },
+	{ id: "clients", label: "Enterprise Clients" },
 	{ id: "achievements", label: "Achievements" },
 ];
 
-const dummyContent = {
-	expertise:
-		"Expertise: UX/UI Design, Web Development, Product Strategy, and more. Lorem ipsum dolor sit amet.",
-	tools: "Tool Stack: Figma, React, Tailwind, Framer, Webflow, and more.",
-	achievements:
-		"Achievements: Award-winning designer, featured in top publications, led teams to success.",
-	hobbies: "Hobbies: Photography, Traveling, Fitness, Reading.",
-	quotes:
-		"“Design is not just what it looks like and feels like. Design is how it works.” – Steve Jobs",
-};
+const enterpriseClients = [
+	{ name: "Vodafone", logo: "https://img.icons8.com/color/48/vodafone.png" },
+	{ name: "Novartis", logo: "https://img.icons8.com/color/48/novartis.png" },
+	{ name: "MUFG", logo: "https://img.icons8.com/color/48/bank.png" },
+	{ name: "Capita Asset Services", logo: "https://img.icons8.com/color/48/business.png" },
+	{ name: "Real Chemistry", logo: "https://img.icons8.com/color/48/chemistry.png" },
+	{ name: "Johnson & Johnson", logo: "https://img.icons8.com/color/48/johnson-and-johnson.png" },
+	{ name: "Quanta Dialysis Technologies", logo: "https://img.icons8.com/color/48/medical-heart.png" },
+	{ name: "KOWA", logo: "https://img.icons8.com/color/48/company.png" },
+];
 
 const ProfileSection = () => {
 	const [activeSection, setActiveSection] = useState("about");
@@ -111,58 +108,12 @@ const ProfileSection = () => {
 
 				{/* Main Content */}
 				<div id="about" className="lg:w-full">
-					{/* Images Grid */}
-					{/* <motion.div
-
-            variants={fadeUp}
-            className="flex flex-col md:flex-row md:p-0 p-2 w-full md:h-[350px] gap-4 mb-8"
-          >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="w-full md:w-1/2 aspect-square md:aspect-auto h-auto md:h-full"
-            >
-              <img
-                src="https://d33wubrfki0l68.cloudfront.net/d60809b00245b908cb6bd13f738448884ce8ab8a/da314/img/byt8.jpg"
-                alt="Portrait"
-                className="rounded-xl object-cover w-full h-full"
-                style={{ objectPosition: 'center' }}
-              />
-            </motion.div>
-
-            <div className="w-full md:w-1/4 flex flex-col gap-4">
-              <motion.div whileHover={{ scale: 1.02 }} className="aspect-square md:aspect-auto h-auto md:h-1/2">
-                <img
-                  src="https://framerusercontent.com/images/PrXt5YnhivwZnFBmO4CXpCjhE.jpg"
-                  alt="Fitness"
-                  className="rounded-xl object-cover w-full h-full"
-                  style={{ minHeight: '0' }}
-                />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} className="aspect-square md:aspect-auto h-auto md:h-1/2">
-                <img
-                  src="https://framerusercontent.com/images/LRTfW33dDQ4cq3ud2AIafMsp8.jpg"
-                  alt="Workspace"
-                  className="rounded-xl object-cover w-full h-full"
-                  style={{ minHeight: '0' }}
-                />
-              </motion.div>
-            </div>
-
-            <motion.div whileHover={{ scale: 1.02 }} className="w-full md:w-1/4 aspect-square md:aspect-auto h-auto md:h-full">
-              <img
-                src="https://framerusercontent.com/images/6Kw3mxswD13ZkXKHzWvEr6T6tRk.jpg"
-                alt="Beach"
-                className="rounded-xl object-cover w-full h-full"
-              />
-            </motion.div>
-          </motion.div> */}
-
 					{/* Intro Text */}
 					<motion.h1
 						variants={fadeUp}
 						id="about"
 						className="text-2xl md:text-3xl font-semibold mb-4">
-						I’m Murtaza, Product Manager, Business Analyst, UX Strategist, MVP
+						I'm Murtaza, Product Manager, Business Analyst, UX Strategist, MVP
 						Builder, and AI Integration Lead
 					</motion.h1>
 					<motion.p
@@ -176,7 +127,7 @@ const ProfileSection = () => {
 						delivering outcomes across agile teams.
 					</motion.p>
 
-					{/* Buttons */}
+					{/* Contact Buttons */}
 					<motion.div
 						variants={fadeUp}
 						className="flex flex-wrap items-center gap-4">
@@ -188,11 +139,11 @@ const ProfileSection = () => {
 						</motion.a>
 						<motion.a
 							whileHover={{ scale: 1.05 }}
-							href="/resume.pdf"
+							href="https://www.upwork.com/freelancers/~011bb3aa35b3bd5e52"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-[#343434] hover:bg-[#444] text-white px-4 py-2 rounded-xl text-md font-medium transition-colors duration-200 flex items-center gap-2">
-							Resume <span className="text-base">↗</span>
+							Invite me on Upwork <span className="text-base">↗</span>
 						</motion.a>
 						<motion.a
 							whileHover={{ scale: 1.1 }}
@@ -210,14 +161,34 @@ const ProfileSection = () => {
 						</motion.a>
 					</motion.div>
 
-					<motion.p
-						variants={fadeUp}
-						className="text-white text-lg my-6 max-w-3xl leading-relaxed">
-						Great design is more than aesthetics. It is about creating seamless
-						user experiences that engage, convert, and scale. My approach
-						combines strategy, usability, and execution to create solutions that
-						make a real impact.
-					</motion.p>
+					{/* What I Deliver Section */}
+					<motion.div variants={fadeUp} className="my-8">
+						<h3 className="text-xl font-semibold text-white mb-4">What I Deliver</h3>
+						<p className="text-white text-lg mb-6 max-w-3xl leading-relaxed">
+							Whether launching a new platform or optimizing internal workflows, I combine product thinking with design execution and technical planning. I work closely with analysts, designers, engineers, and leadership to create investor-ready prototypes, detailed specifications, and systems that scale.
+						</p>
+					</motion.div>
+
+					{/* Why Clients Work With Me */}
+					<motion.div variants={fadeUp} className="my-8">
+						<h3 className="text-xl font-semibold text-white mb-4">Why Clients Work With Me</h3>
+						<div className="grid grid-cols-1 gap-3">
+							{[
+								"Product discovery and roadmap planning with stakeholder alignment",
+								"Business analysis and BRD documentation for complex systems",
+								"UX/UI strategy and prototyping using Figma, Whimsical, and Miro",
+								"Salesforce CRM setup, data migration, and platform automation",
+								"AI integration across real-world use cases such as document parsing, form filling, and task automation",
+								"No-code MVP delivery using Airtable, Softr, Supabase, and automation platforms",
+								"Martech and internal tooling for operations, compliance, and engagement"
+							].map((item, idx) => (
+								<div key={idx} className="flex items-start gap-3">
+									<span className="text-green-400 mt-1">•</span>
+									<span className="text-gray-300 text-base leading-relaxed">{item}</span>
+								</div>
+							))}
+						</div>
+					</motion.div>
 
 					{/* About Sections */}
 					<div className="space-y-20 pt-8">
@@ -237,7 +208,7 @@ const ProfileSection = () => {
 								{sec.id === "expertise" ? (
 									<div>
 										{/* Skill Tags */}
-										<div className="flex flex-wrap gap-3 mb-8">
+										{/* <div className="flex flex-wrap gap-3 mb-8">
 											{[
 												{ label: "Product Design", icon: "/productdesign.png" },
 												{ label: "No-Code", icon: "/nocode.png" },
@@ -259,55 +230,68 @@ const ProfileSection = () => {
 													{tag.label}
 												</span>
 											))}
-										</div>
+										</div> */}
 
-										{/* Experience List */}
+										{/* Updated Employment History */}
 										<div className="flex flex-col gap-0">
 											{[
 												{
 													logo: "https://img.icons8.com/ios-filled/50/999999/company.png",
-													title: "Freelance Product & Web Designer",
-													company: "RobertLicau.com",
-													location: "Worldwide",
-													date: "Feb 2017 – Present",
-													duration: "8 years",
+													title: "Product Manager, Business Analyst, UX/UI, MVP Builder",
+													company: "Rovamo",
+													location: "Remote",
+													date: "Feb 2015 – Present",
+													duration: "9+ years",
+													description: "Led strategy and execution across AI-powered solutions, workflow automation, and MVPs for fintech, healthcare, and enterprise clients."
 												},
 												{
-													logo: "https://img.icons8.com/color/48/000000/ethereum.png",
-													title: "Head of Design",
-													company: "dcSpark Inc.",
-													location: "Austin, Texas, United States",
-													date: "Nov 2021 – Jul 2023",
-													duration: "1 year 9 months",
+													logo: "https://img.icons8.com/color/48/chemistry.png",
+													title: "Senior Salesforce Business Analyst",
+													company: "Real Chemistry",
+													location: "Remote",
+													date: "Jul 2021 – Nov 2022",
+													duration: "1 year 5 months",
+													description: "Led Salesforce Marketing Cloud setup and data integration. Conducted discovery sessions, created BRDs and FRDs."
 												},
 												{
-													logo: "https://img.icons8.com/color/48/000000/ethereum.png",
-													title: "Rovqm",
-													company: "dcSpark Inc.",
-													location: "Austin, Texas, United States",
-													date: "Nov 2021 – Jul 2023",
-													duration: "1 year 9 months",
+													logo: "https://img.icons8.com/color/48/engineering.png",
+													title: "Product Manager",
+													company: "ENGEO (US)",
+													location: "Remote",
+													date: "Oct 2017 – Mar 2018",
+													duration: "6 months",
+													description: "Scoped and delivered an internal AI-powered document search platform."
 												},
 												{
-													logo: "https://img.icons8.com/color/48/000000/ui-design.png",
-													title: "Founder & Lead Product Designer",
-													company: "uibundle.com",
-													location: "Worldwide",
-													date: "Oct 2018 – Present",
-													duration: "6 years 5 months",
+													logo: "https://img.icons8.com/color/48/vodafone.png",
+													title: "Technical Business Analyst",
+													company: "Vodafone (UK)",
+													location: "London",
+													date: "Apr 2016 – Nov 2016",
+													duration: "8 months",
+													description: "Delivered user stories, process maps, and sprint specs for Vodafone's mobile self-care app."
+												},
+												{
+													logo: "https://img.icons8.com/color/48/business.png",
+													title: "Business Analyst",
+													company: "Mufg Pensions and Market Services (UK)",
+													location: "London",
+													date: "Sep 2011 – Jan 2015",
+													duration: "3 years 5 months",
+													description: "Led analysis and documentation for PRISM, a shareholder and corporate actions platform."
 												},
 											].map((job, idx) => (
 												<div
 													key={idx}
 													className="flex items-start justify-between bg-transparent rounded-2xl px-4 py-4 md:px-6 md:py-5">
 													<div className="flex items-center gap-4 md:gap-6 w-full">
-														<div className="min-w-[48px] min-h-[48px] flex items-center justify-center rounded-xl overflow-hidden bg-transparent">
+														{/* <div className="min-w-[48px] min-h-[48px] flex items-center justify-center rounded-xl overflow-hidden bg-transparent">
 															<img
 																src={job.logo}
 																alt={job.company}
 																className="w-10 h-10 object-contain"
 															/>
-														</div>
+														</div> */}
 														<div className="flex-1">
 															<div className="text-white font-semibold text-base md:text-lg leading-tight">
 																{job.title}
@@ -315,210 +299,259 @@ const ProfileSection = () => {
 															<div className="text-gray-300 text-sm md:text-sm font-medium">
 																{job.company}
 															</div>
-															<div className="text-gray-500 text-xs md:text-xs">
+															<div className="text-gray-500 text-xs md:text-xs mb-2">
 																{job.location}
 															</div>
+															{job.description && (
+																<div className="text-gray-400 text-xs md:text-sm leading-relaxed">
+																	{job.description}
+																</div>
+															)}
 														</div>
 													</div>
 													<div className="flex flex-col items-end min-w-[150px] ml-2 md:ml-0">
 														<div className="text-white text-xs md:text-sm font-medium">
 															{job.date}
 														</div>
-														<div className="text-gray-400 text-xs">
+														{/* <div className="text-gray-400 text-xs">
 															({job.duration})
-														</div>
+														</div> */}
 													</div>
 												</div>
 											))}
 										</div>
 									</div>
-								) : (
-									<p className="text-gray-300 text-base md:text-lg leading-relaxed">
-										{sec.id === "tools" ? (
-											<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-												{[
-													{
-														name: "Jira",
-														subtitle: "Agile project & issue tracking",
-														logo: "https://img.icons8.com/color/48/jira.png",
-													},
-													{
-														name: "Confluence",
-														subtitle: "Team documentation & wiki",
-														logo: "https://img.icons8.com/color/48/confluence--v2.png",
-													},
-													{
-														name: "Trello",
-														subtitle: "Visual task management",
-														logo: "https://img.icons8.com/color/48/trello.png",
-													},
-													{
-														name: "React",
-														subtitle: "UI library for building apps",
-														logo: "https://img.icons8.com/plasticine/100/react.png",
-													},
-													{
-														name: "Next.js",
-														subtitle: "Full-stack React framework",
-														logo: "/skills/nextjs.png",
-													},
-													{
-														name: "Supabase",
-														subtitle: "Open-source Firebase alternative",
-														logo: "https://img.icons8.com/fluency/48/supabase.png",
-													},
-													{
-														name: "Airtable",
-														subtitle: "Database meets spreadsheet",
-														logo: "https://img.icons8.com/stickers/100/airtable.png",
-													},
-													{
-														name: "Softr",
-														subtitle: "No-code apps on Airtable",
-														logo: "https://cdn.prod.website-files.com/6772e8855f7859bc8df95c78/67a8cb58af31ced4a0dcda4c_Logo.svg",
-													},
-													{
-														name: "Framer",
-														subtitle: "Design to website builder",
-														logo: "https://img.icons8.com/plumpy/50/framer-logo.png",
-													},
-													{
-														name: "Zapier",
-														subtitle: "Connect apps & automate workflows",
-														logo: "https://img.icons8.com/fluency/48/zapier.png",
-													},
-													{
-														name: "Notion",
-														subtitle: "Docs, notes & knowledge base",
-														logo: "/skills/notion.png",
-													},
-													{
-														name: "Salesforce",
-														subtitle: "CRM & customer platform",
-														logo: "https://img.icons8.com/color/48/salesforce.png",
-													},
-													{
-														name: "Make.com",
-														subtitle: "Visual automation platform",
-														logo: "https://images.ctfassets.net/un655fb9wln6/1k5wBPhbu5kXiaYlFWgEJE/b590772959bd510e64cf230ef37bba3e/Make-Logo-RGB.svg",
-													},
-													{
-														name: "Flowise",
-														subtitle: "Visual tool for AI workflows",
-														logo: "/skills/Logo.png",
-													},
-													{
-														name: "LangChain",
-														subtitle: "Framework for AI applications",
-														logo: "/skills/langchain.svg",
-													},
-													{
-														name: "OpenAI APIs",
-														subtitle: "GPT, embeddings & AI tools",
-														logo: "/skills/chatgpt.png",
-													},
-												].map((tool, idx) => (
-													<div
-														key={tool.name}
-														className="flex items-center justify-between bg-[#343434] rounded-2xl px-4 py-4 md:px-2 md:py-2 hover:bg-[#444] transition group cursor-pointer">
-														<div className="flex items-center gap-4 w-full">
-															<img
-																src={tool.logo}
-																alt={tool.name}
-																className="w-12 h-12 object-contain rounded-lg"
-															/>
-															<div>
-																<div className="text-white font-semibold text-base md:text-lg leading-tight">
-																	{tool.name}
-																	{tool.external && (
-																		<span className="ml-1 align-middle text-xs">
-																			↗
-																		</span>
-																	)}
-																</div>
-																<div className="text-gray-400 text-xs md:text-sm font-normal">
-																	{tool.subtitle}
-																</div>
-															</div>
+								) : sec.id === "tools" ? (
+									<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+										{[
+											// Design & Planning Tools
+											{
+												name: "Figma",
+												subtitle: "Design & prototyping platform",
+												logo: "https://img.icons8.com/color/48/figma--v1.png",
+											},
+											{
+												name: "Miro",
+												subtitle: "Visual collaboration platform",
+												logo: "/miro.svg",
+											},
+											{
+												name: "Whimsical",
+												subtitle: "Flowcharts & wireframing",
+												logo: "/w.svg",
+											},
+											{
+												name: "Notion",
+												subtitle: "Docs, notes & knowledge base",
+												logo: "/skills/notion.png",
+											},
+											{
+												name: "Jira",
+												subtitle: "Agile project & issue tracking",
+												logo: "https://img.icons8.com/color/48/jira.png",
+											},
+											{
+												name: "Confluence",
+												subtitle: "Team documentation & wiki",
+												logo: "https://img.icons8.com/color/48/confluence--v2.png",
+											},
+											// CRM & Automation
+											{
+												name: "Salesforce",
+												subtitle: "CRM & customer platform",
+												logo: "https://img.icons8.com/color/48/salesforce.png",
+											},
+											{
+												name: "Make.com",
+												subtitle: "Visual automation platform",
+												logo: "https://images.ctfassets.net/un655fb9wln6/1k5wBPhbu5kXiaYlFWgEJE/b590772959bd510e64cf230ef37bba3e/Make-Logo-RGB.svg",
+											},
+											{
+												name: "Zapier",
+												subtitle: "Connect apps & automate workflows",
+												logo: "https://img.icons8.com/fluency/48/zapier.png",
+											},
+											{
+												name: "Softr",
+												subtitle: "No-code apps on Airtable",
+												logo: "https://cdn.prod.website-files.com/6772e8855f7859bc8df95c78/67a8cb58af31ced4a0dcda4c_Logo.svg",
+											},
+											{
+												name: "Airtable",
+												subtitle: "Database meets spreadsheet",
+												logo: "https://img.icons8.com/stickers/100/airtable.png",
+											},
+											{
+												name: "Supabase",
+												subtitle: "Open-source Firebase alternative",
+												logo: "https://img.icons8.com/fluency/48/supabase.png",
+											},
+											{
+												name: "Framer",
+												subtitle: "Design to website builder",
+												logo: "https://img.icons8.com/plumpy/50/framer-logo.png",
+											},
+											// Development Tools
+											{
+												name: "React",
+												subtitle: "UI library for building apps",
+												logo: "https://img.icons8.com/plasticine/100/react.png",
+											},
+											{
+												name: "Next.js",
+												subtitle: "Full-stack React framework",
+												logo: "/skills/nextjs.png",
+											},
+											{
+												name: "Vercel",
+												subtitle: "Frontend deployment platform",
+												logo: "/vercel.svg",
+											},
+											{
+												name: "Netlify",
+												subtitle: "Web development platform",
+												logo: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png",
+											},
+											// AI Tools
+											{
+												name: "LangChain",
+												subtitle: "Framework for AI applications",
+												logo: "/skills/langchain.svg",
+											},
+											{
+												name: "Flowise",
+												subtitle: "Visual tool for AI workflows",
+												logo: "/skills/Logo.png",
+											},
+											{
+												name: "OpenAI APIs",
+												subtitle: "GPT, embeddings & AI tools",
+												logo: "/skills/chatgpt.png",
+											},
+											{
+												name: "LlamaIndex",
+												subtitle: "Data framework for LLMs",
+												logo: "https://img.icons8.com/color/48/llama.png",
+											},
+										].map((tool, idx) => (
+											<div
+												key={tool.name}
+												className="flex items-center justify-between bg-[#343434] rounded-2xl px-4 py-4 md:px-2 md:py-2 hover:bg-[#444] transition group cursor-pointer">
+												<div className="flex items-center gap-4 w-full">
+													<img
+														src={tool.logo}
+														alt={tool.name}
+														className="w-12 h-12 object-contain rounded-lg"
+													/>
+													<div>
+														<div className="text-white font-semibold text-base md:text-lg leading-tight">
+															{tool.name}
 														</div>
-														<div className="flex-shrink-0 ml-4">
-															<svg
-																width="22"
-																height="22"
-																fill="none"
-																xmlns="http://www.w3.org/2000/svg"
-																className="text-gray-400 group-hover:text-white transition"
-																viewBox="0 0 24 24">
-																<path
-																	d="M9 5l7 7-7 7"
-																	stroke="currentColor"
-																	strokeWidth="2"
-																	strokeLinecap="round"
-																	strokeLinejoin="round"
-																/>
-															</svg>
+														<div className="text-gray-400 text-xs md:text-sm font-normal">
+															{tool.subtitle}
 														</div>
-													</div>
-												))}
-											</div>
-										) : sec.id === "achievements" ? (
-											<div className="w-full relative overflow-hidden py-2">
-												{/* Left Fade Overlay */}
-												<div
-													className="pointer-events-none absolute left-0 top-0 h-full w-24 z-20"
-													style={{
-														background:
-															"linear-gradient(90deg, #101010 60%, rgba(16,16,16,0.7) 80%, transparent 100%)",
-													}}></div>
-
-												{/* Right Fade Overlay */}
-												<div
-													className="pointer-events-none absolute right-0 top-0 h-full w-24 z-20"
-													style={{
-														background:
-															"linear-gradient(270deg, #101010 60%, rgba(16,16,16,0.7) 80%, transparent 100%)",
-													}}></div>
-
-												{/* Slider */}
-												<div className="relative w-full overflow-hidden">
-													<div
-														className="flex gap-3 animate-achievement-slider"
-														style={{ minWidth: "1200px" }}>
-														{[...achievements, ...achievements].map(
-															(item, idx) => (
-															<motion.div
-  key={idx}
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: idx * 0.18 }}
-  viewport={{ once: true, amount: 0.2 }}
-  className="relative bg-[#343434] rounded-tl-[10px] rounded-tr-[40px] rounded-bl-[10px] rounded-br-[10px] 
-             py-5 px-7 flex flex-col justify-between items-start 
-             min-h-[250px] w-[220px] max-w-xs overflow-hidden shadow-lg"
->
-  {/* Number */}
-  <span className="text-xl md:text-3xl font-bold text-white z-10">
-    {item.number}
-  </span>
-
-  {/* Spacer */}
-  <div className="flex-1 w-full"></div>
-
-  {/* Text */}
-  <span className="text-gray-300 text-sm font-medium z-10 whitespace-pre-line mt-auto mb-0 leading-snug break-words">
-    {item.label}
-  </span>
-</motion.div>
-
-															)
-														)}
 													</div>
 												</div>
-												{/* Keyframes in index.css: @keyframes achievement-slider { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} } */}
+												<div className="flex-shrink-0 ml-4">
+													<svg
+														width="22"
+														height="22"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+														className="text-gray-400 group-hover:text-white transition"
+														viewBox="0 0 24 24">
+														<path
+															d="M9 5l7 7-7 7"
+															stroke="currentColor"
+															strokeWidth="2"
+															strokeLinecap="round"
+															strokeLinejoin="round"
+														/>
+													</svg>
+												</div>
 											</div>
-										) : null}
-									</p>
-								)}
+										))}
+									</div>
+								) : sec.id === "clients" ? (
+									<div>
+										<p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+											I've had the privilege of working with leading enterprise clients across various industries:
+										</p>
+										<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+											{enterpriseClients.map((client, idx) => (
+												<motion.div
+													key={client.name}
+													initial={{ opacity: 0, y: 20 }}
+													whileInView={{ opacity: 1, y: 0 }}
+													transition={{ duration: 0.5, delay: idx * 0.1 }}
+													viewport={{ once: true }}
+													className="bg-[#343434] rounded-xl p-4 py-6 flex flex-col justify-center items-center text-center hover:bg-[#444] transition group cursor-pointer">
+													{/* <img
+														src={client.logo}
+														alt={client.name}
+														className="w-12 h-12 object-contain mb-3"
+													/> */}
+													<span className="text-white text-md font-medium leading-tight">
+														{client.name}
+													</span>
+												</motion.div>
+											))}
+										</div>
+									</div>
+								) : sec.id === "achievements" ? (
+									<div className="w-full relative overflow-hidden py-2">
+										{/* Left Fade Overlay */}
+										<div
+											className="pointer-events-none absolute left-0 top-0 h-full w-24 z-20"
+											style={{
+												background:
+													"linear-gradient(90deg, #101010 60%, rgba(16,16,16,0.7) 80%, transparent 100%)",
+											}}></div>
+
+										{/* Right Fade Overlay */}
+										<div
+											className="pointer-events-none absolute right-0 top-0 h-full w-24 z-20"
+											style={{
+												background:
+													"linear-gradient(270deg, #101010 60%, rgba(16,16,16,0.7) 80%, transparent 100%)",
+											}}></div>
+
+										{/* Slider */}
+										<div className="relative w-full overflow-hidden">
+											<div
+												className="flex gap-3 animate-achievement-slider"
+												style={{ minWidth: "1200px" }}>
+												{[...achievements, ...achievements].map(
+													(item, idx) => (
+													<motion.div
+														key={idx}
+														initial={{ opacity: 0, y: 40 }}
+														whileInView={{ opacity: 1, y: 0 }}
+														transition={{ duration: 0.6, delay: idx * 0.18 }}
+														viewport={{ once: true, amount: 0.2 }}
+														className="relative bg-[#343434] rounded-tl-[10px] rounded-tr-[40px] rounded-bl-[10px] rounded-br-[10px] 
+																	 py-5 px-7 flex flex-col justify-between items-start 
+																	 min-h-[250px] w-[220px] max-w-xs overflow-hidden shadow-lg"
+													>
+														{/* Number */}
+														<span className="text-xl md:text-3xl font-bold text-white z-10">
+															{item.number}
+														</span>
+
+														{/* Spacer */}
+														<div className="flex-1 w-full"></div>
+
+														{/* Text */}
+														<span className="text-gray-300 text-sm font-medium z-10 whitespace-pre-line mt-auto mb-0 leading-snug break-words">
+															{item.label}
+														</span>
+													</motion.div>
+													)
+												)}
+											</div>
+										</div>
+									</div>
+								) : null}
 							</motion.section>
 						))}
 					</div>
