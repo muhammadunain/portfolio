@@ -67,7 +67,7 @@ const ProjectPage = () => {
 						{project.link && (
 							<a href={project.link} target="_blank">
 								<button className="bg-[#343434] hover:bg-[#444] cursor-pointer text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 flex items-center gap-2">
-								{project.text?"MVP Link" :"View Project"}
+								{project.text?"MVP Link" :"Front End Prototype"}
 								</button>
 							</a>
 						)}
