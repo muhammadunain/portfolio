@@ -47,11 +47,11 @@ const Header = () => {
     }
   };
 
-
   return (
     <div
-      className={`px-8 py-6  md:py-6 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
-        }`}
+      className={`px-8 py-6 md:py-6 sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'backdrop-blur-sm bg-transparent' : 'bg-transparent'
+      }`}
     >
       <nav className="flex justify-between items-center text-white">
         {/* Profile Image */}
@@ -100,25 +100,36 @@ const Header = () => {
                   </motion.div>
                 )
               ))}
+
+              {/* Desktop Upwork Button */}
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                href="https://www.upwork.com/freelancers/~011bb3aa35b3bd5e52"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#343434] hover:bg-[#444] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 flex items-center gap-2"
+              >
+                Invite me on Upwork <span className="text-base">↗</span>
+              </motion.a>
             </div>
 
             {/* Contact */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
-              className="px-4 py-2 rounded-md text-sm font-medium  bg-white text-black"
+              className="px-4 py-2 rounded-md text-sm cursor-pointer font-medium bg-white text-black"
               onClick={handleContactClick}
             >
               {contactItem}
             </motion.button>
 
-            {/* Hamburger */}
-            {/* <button
-              className="bg-zinc-800 p-2 rounded-md w-9 h-9 flex items-center justify-center"
+            {/* Hamburger - Show on mobile */}
+            <button
+              className="md:hidden bg-zinc-800 p-2 rounded-md w-9 h-9 flex items-center justify-center"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
-            </button> */}
+            </button>
           </div>
 
           {/* Animated Dropdown */}
@@ -129,12 +140,12 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-14 right-0 bg-transparent backdrop-blur-lg rounded-md shadow-lg space-y-3 z-10"
+                className="absolute top-14 right-0 bg-zinc-900/95 backdrop-blur-lg rounded-md shadow-lg p-4 space-y-3 z-10"
                 style={{
                   width:
                     typeof window !== 'undefined' && window.innerWidth >= 768
                       ? dropdownWidth
-                      : '45vw',
+                      : '280px',
                 }}
               >
                 {/* Mobile nav items */}
@@ -142,19 +153,28 @@ const Header = () => {
                   {navItems.map((item, idx) => (
                     item === 'Work' ? (
                       <motion.div
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.02 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         key={idx}
-                        className="bg-zinc-800 text-white px-4 py-2 rounded-md font-medium transition"
+                        className="bg-zinc-800 text-white px-4 py-2 rounded-md font-medium hover:bg-zinc-700 transition"
                       >
-                        <Link to="/work">{item}</Link>
+                        <Link to="/work" onClick={() => setMenuOpen(false)}>{item}</Link>
+                      </motion.div>
+                    ) : item === 'About' ? (
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                        key={idx}
+                        className="bg-zinc-800 text-white px-4 py-2 rounded-md font-medium hover:bg-zinc-700 transition"
+                      >
+                        <Link to="/about" onClick={() => setMenuOpen(false)}>{item}</Link>
                       </motion.div>
                     ) : (
                       <motion.div
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.02 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         key={idx}
-                        className="bg-zinc-800 text-white px-4 py-2 rounded-md font-medium transition"
+                        className="bg-zinc-800 text-white px-4 py-2 rounded-md font-medium hover:bg-zinc-700 transition"
                       >
                         {item}
                       </motion.div>
@@ -162,28 +182,48 @@ const Header = () => {
                   ))}
                 </div>
 
+                {/* Mobile Upwork Button */}
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  href="https://www.upwork.com/freelancers/~011bb3aa35b3bd5e52"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#343434] hover:bg-[#444] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 flex items-center gap-2"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Invite me on Upwork <span className="text-base">↗</span>
+                </motion.a>
+
                 {/* Primary Dropdown */}
-                {primaryDropdown.map((item, idx) => (
+                {/* {primaryDropdown.map((item, idx) => (
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.02 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                     key={idx}
-                    className="px-4 py-2 rounded-md text-sm font-medium bg-white/10 backdrop-blur-lg text-white hover:bg-white/20 transition"
+                    className="px-4 py-2 rounded-md text-sm font-medium bg-white/10 backdrop-blur-lg text-white hover:bg-white/20 transition cursor-pointer"
                   >
-                    {item}
-                    {item === 'Resume' && (
-                      <ArrowUpRight className="inline-block ml-2" size={14} />
-                    )}
+                    <div className="flex justify-between items-center">
+                      <span>{item}</span>
+                      {item === 'Resume' && (
+                        <ArrowUpRight size={14} />
+                      )}
+                    </div>
                   </motion.div>
-                ))}
+                ))} */}
 
                 {/* Social Links */}
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                   className="px-4 text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition py-2 rounded-md cursor-pointer space-y-2"
                 >
-                  <a href="https://www.linkedin.com/in/murt4z4/" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center">
+                  <a 
+                    href="https://www.linkedin.com/in/murt4z4/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex justify-between items-center"
+                    onClick={() => setMenuOpen(false)}
+                  >
                     <span>Linkedin</span>
                     <ArrowUpRight size={14} />
                   </a>

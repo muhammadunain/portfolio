@@ -51,10 +51,22 @@ const enterpriseClients = [
 	{ name: "Vodafone", logo: "https://img.icons8.com/color/48/vodafone.png" },
 	{ name: "Novartis", logo: "https://img.icons8.com/color/48/novartis.png" },
 	{ name: "MUFG", logo: "https://img.icons8.com/color/48/bank.png" },
-	{ name: "Capita Asset Services", logo: "https://img.icons8.com/color/48/business.png" },
-	{ name: "Real Chemistry", logo: "https://img.icons8.com/color/48/chemistry.png" },
-	{ name: "Johnson & Johnson", logo: "https://img.icons8.com/color/48/johnson-and-johnson.png" },
-	{ name: "Quanta Dialysis Technologies", logo: "https://img.icons8.com/color/48/medical-heart.png" },
+	{
+		name: "Capita Asset Services",
+		logo: "https://img.icons8.com/color/48/business.png",
+	},
+	{
+		name: "Real Chemistry",
+		logo: "https://img.icons8.com/color/48/chemistry.png",
+	},
+	{
+		name: "Johnson & Johnson",
+		logo: "https://img.icons8.com/color/48/johnson-and-johnson.png",
+	},
+	{
+		name: "Quanta Dialysis Technologies",
+		logo: "https://img.icons8.com/color/48/medical-heart.png",
+	},
 	{ name: "KOWA", logo: "https://img.icons8.com/color/48/company.png" },
 ];
 
@@ -163,15 +175,23 @@ const ProfileSection = () => {
 
 					{/* What I Deliver Section */}
 					<motion.div variants={fadeUp} className="my-8">
-						<h3 className="text-xl font-semibold text-white mb-4">What I Deliver</h3>
+						<h3 className="text-xl font-semibold text-white mb-4">
+							What I Deliver
+						</h3>
 						<p className="text-white text-lg mb-6 max-w-3xl leading-relaxed">
-							Whether launching a new platform or optimizing internal workflows, I combine product thinking with design execution and technical planning. I work closely with analysts, designers, engineers, and leadership to create investor-ready prototypes, detailed specifications, and systems that scale.
+							Whether launching a new platform or optimizing internal workflows,
+							I combine product thinking with design execution and technical
+							planning. I work closely with analysts, designers, engineers, and
+							leadership to create investor-ready prototypes, detailed
+							specifications, and systems that scale.
 						</p>
 					</motion.div>
 
 					{/* Why Clients Work With Me */}
 					<motion.div variants={fadeUp} className="my-8">
-						<h3 className="text-xl font-semibold text-white mb-4">Why Clients Work With Me</h3>
+						<h3 className="text-xl font-semibold text-white mb-4">
+							Why Clients Work With Me
+						</h3>
 						<div className="grid grid-cols-1 gap-3">
 							{[
 								"Product discovery and roadmap planning with stakeholder alignment",
@@ -180,11 +200,13 @@ const ProfileSection = () => {
 								"Salesforce CRM setup, data migration, and platform automation",
 								"AI integration across real-world use cases such as document parsing, form filling, and task automation",
 								"No-code MVP delivery using Airtable, Softr, Supabase, and automation platforms",
-								"Martech and internal tooling for operations, compliance, and engagement"
+								"Martech and internal tooling for operations, compliance, and engagement",
 							].map((item, idx) => (
 								<div key={idx} className="flex items-start gap-3">
 									<span className="text-green-400 mt-1">•</span>
-									<span className="text-gray-300 text-base leading-relaxed">{item}</span>
+									<span className="text-gray-300 text-base leading-relaxed">
+										{item}
+									</span>
 								</div>
 							))}
 						</div>
@@ -237,12 +259,14 @@ const ProfileSection = () => {
 											{[
 												{
 													logo: "https://img.icons8.com/ios-filled/50/999999/company.png",
-													title: "Product Manager, Business Analyst, UX/UI, MVP Builder",
+													title:
+														"Product Manager, Business Analyst, UX/UI, MVP Builder",
 													company: "Rovamo",
 													location: "Remote",
 													date: "Feb 2015 – Present",
 													duration: "9+ years",
-													description: "Led strategy and execution across AI-powered solutions, workflow automation, and MVPs for fintech, healthcare, and enterprise clients."
+													description:
+														"Led strategy and execution across AI-powered solutions, workflow automation, and MVPs for fintech, healthcare, and enterprise clients.",
 												},
 												{
 													logo: "https://img.icons8.com/color/48/chemistry.png",
@@ -251,7 +275,8 @@ const ProfileSection = () => {
 													location: "Remote",
 													date: "Jul 2021 – Nov 2022",
 													duration: "1 year 5 months",
-													description: "Led Salesforce Marketing Cloud setup and data integration. Conducted discovery sessions, created BRDs and FRDs."
+													description:
+														"Led Salesforce Marketing Cloud setup and data integration. Conducted discovery sessions, created BRDs and FRDs.",
 												},
 												{
 													logo: "https://img.icons8.com/color/48/engineering.png",
@@ -260,7 +285,8 @@ const ProfileSection = () => {
 													location: "Remote",
 													date: "Oct 2017 – Mar 2018",
 													duration: "6 months",
-													description: "Scoped and delivered an internal AI-powered document search platform."
+													description:
+														"Scoped and delivered an internal AI-powered document search platform.",
 												},
 												{
 													logo: "https://img.icons8.com/color/48/vodafone.png",
@@ -269,7 +295,8 @@ const ProfileSection = () => {
 													location: "London",
 													date: "Apr 2016 – Nov 2016",
 													duration: "8 months",
-													description: "Delivered user stories, process maps, and sprint specs for Vodafone's mobile self-care app."
+													description:
+														"Delivered user stories, process maps, and sprint specs for Vodafone's mobile self-care app.",
 												},
 												{
 													logo: "https://img.icons8.com/color/48/business.png",
@@ -278,7 +305,8 @@ const ProfileSection = () => {
 													location: "London",
 													date: "Sep 2011 – Jan 2015",
 													duration: "3 years 5 months",
-													description: "Led analysis and documentation for PRISM, a shareholder and corporate actions platform."
+													description:
+														"Led analysis and documentation for PRISM, a shareholder and corporate actions platform.",
 												},
 											].map((job, idx) => (
 												<div
@@ -433,6 +461,100 @@ const ProfileSection = () => {
 												subtitle: "Data framework for LLMs",
 												logo: "https://img.icons8.com/color/48/llama.png",
 											},
+											{
+												name: "Loveable",
+												subtitle: "AI-powered app builder",
+												logo: "/skills/lovable.png",
+											},
+											{
+												name: "Bolt",
+												subtitle: "AI coding assistant",
+												logo: "https://img.icons8.com/color/48/lightning-bolt.png",
+											},
+											{
+												name: "Claude",
+												subtitle: "AI assistant by Anthropic",
+												logo: "https://img.icons8.com/color/48/artificial-intelligence.png",
+											},
+											{
+												name: "Tempo AI",
+												subtitle: "AI workflow automation",
+												logo: "https://img.icons8.com/color/48/time.png",
+											},
+											{
+												name: "Cursor",
+												subtitle: "AI-powered code editor",
+												logo: "/skills/cursor.png",
+											},
+											{
+												name: "v0 by Vercel",
+												subtitle: "AI UI generator",
+												logo: "https://img.icons8.com/color/48/v.png",
+											},
+											{
+												name: "Replit",
+												subtitle: "AI-powered coding platform",
+												logo: "https://img.icons8.com/color/48/code.png",
+											},
+											{
+												name: "GitHub Copilot",
+												subtitle: "AI pair programmer",
+												logo: "https://img.icons8.com/color/48/github.png",
+											},
+											{
+												name: "Bubble",
+												subtitle: "No-code app builder",
+												logo: "https://img.icons8.com/color/48/bubble.png",
+											},
+											{
+												name: "Webflow",
+												subtitle: "Visual web development",
+												logo: "https://img.icons8.com/color/48/webflow.png",
+											},
+
+											{
+												name: "Airtable",
+												subtitle: "No-code database platform",
+												logo: "https://img.icons8.com/color/48/airtable.png",
+											},
+
+											{
+												name: "Make (Integromat)",
+												subtitle: "Visual automation platform",
+												logo: "https://img.icons8.com/color/48/automation.png",
+											},
+											{
+												name: "Retool",
+												subtitle: "Low-code app builder",
+												logo: "https://img.icons8.com/color/48/wrench.png",
+											},
+
+											{
+												name: "Midjourney",
+												subtitle: "AI image generation",
+												logo: "/skills/midjourney.png",
+											},
+											{
+												name: "Stable Diffusion",
+												subtitle: "Open source AI art",
+												logo: "https://img.icons8.com/color/48/artificial-intelligence.png",
+											},
+											{
+												name: "RunwayML",
+												subtitle: "AI creative tools",
+												logo: "https://img.icons8.com/color/48/runway.png",
+											},
+											{
+												name: "Hugging Face",
+												subtitle: "AI model hub",
+												logo: "https://img.icons8.com/color/48/hugging-face.png",
+											},
+
+											{
+												name: "Pinecone",
+												subtitle: "Vector database for AI",
+												logo: "https://img.icons8.com/color/48/pine-tree.png",
+											},
 										].map((tool, idx) => (
 											<div
 												key={tool.name}
@@ -475,7 +597,8 @@ const ProfileSection = () => {
 								) : sec.id === "clients" ? (
 									<div>
 										<p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-											I've had the privilege of working with leading enterprise clients across various industries:
+											I've had the privilege of working with leading enterprise
+											clients across various industries:
 										</p>
 										<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 											{enterpriseClients.map((client, idx) => (
@@ -521,8 +644,7 @@ const ProfileSection = () => {
 											<div
 												className="flex gap-3 animate-achievement-slider"
 												style={{ minWidth: "1200px" }}>
-												{[...achievements, ...achievements].map(
-													(item, idx) => (
+												{[...achievements, ...achievements].map((item, idx) => (
 													<motion.div
 														key={idx}
 														initial={{ opacity: 0, y: 40 }}
@@ -531,8 +653,7 @@ const ProfileSection = () => {
 														viewport={{ once: true, amount: 0.2 }}
 														className="relative bg-[#343434] rounded-tl-[10px] rounded-tr-[40px] rounded-bl-[10px] rounded-br-[10px] 
 																	 py-5 px-7 flex flex-col justify-between items-start 
-																	 min-h-[250px] w-[220px] max-w-xs overflow-hidden shadow-lg"
-													>
+																	 min-h-[250px] w-[220px] max-w-xs overflow-hidden shadow-lg">
 														{/* Number */}
 														<span className="text-xl md:text-3xl font-bold text-white z-10">
 															{item.number}
@@ -546,8 +667,7 @@ const ProfileSection = () => {
 															{item.label}
 														</span>
 													</motion.div>
-													)
-												)}
+												))}
 											</div>
 										</div>
 									</div>

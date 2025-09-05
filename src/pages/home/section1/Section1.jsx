@@ -9,7 +9,7 @@ const Section1 = () => {
   const roles = [
     "Product Manager Business Analyst",
     "UX Strategist",
-    "MVP Builder and AI Integration Lead",
+    "MVP Builder & AI Integration Lead",
   ];
 
   useEffect(() => {
@@ -33,27 +33,29 @@ const Section1 = () => {
         <div className="space-y-8">
           <h1 className="text-4xl md:text-5xl font-base leading-tight">
             I'm Murtaza.<br />
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={currentRoleIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ 
-                  duration: 0.5,
-                  ease: "easeInOut"
-                }}
-                className="inline-block"
-              >
-                {roles[currentRoleIndex]}
-              </motion.span>
-            </AnimatePresence>
-           
+            {/* Fixed height container to prevent layout shifts */}
+            <div className="h-[3.5rem] md:h-[4rem] flex items-start">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentRoleIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ 
+                    duration: 0.5,
+                    ease: "easeInOut"
+                  }}
+                  className="inline-block"
+                >
+                  {roles[currentRoleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
           </h1>
 
           <ul className="space-y-2 text-lg md:text-sm font-base">
-            <li>• Years in product management, UX design, and business analysis</li>
-            <li>• projects delivered across fintech, healthcare, SaaS, logistics, and martech</li>
+            <li>• 16+ Years in product management, UX design, & business analysis</li>
+            <li>• 50+ projects delivered across fintech, healthcare, SaaS, logistics, & martech</li>
           </ul>
         </div>
 
