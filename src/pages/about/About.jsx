@@ -230,7 +230,7 @@ const ProfileSection = () => {
 								{sec.id === "expertise" ? (
 									<div>
 										{/* Skill Tags */}
-										{/* <div className="flex flex-wrap gap-3 mb-8">
+										<div className="flex flex-wrap gap-3 mb-8">
 											{[
 												{ label: "Product Design", icon: "/productdesign.png" },
 												{ label: "No-Code", icon: "/nocode.png" },
@@ -252,10 +252,14 @@ const ProfileSection = () => {
 													{tag.label}
 												</span>
 											))}
-										</div> */}
+											
+										</div>
 
 										{/* Updated Employment History */}
 										<div className="flex flex-col gap-0">
+											<h2 className="text-2xl font-bold text-white mb-4">
+									Experience
+								</h2>
 											{[
 												{
 													logo: "https://img.icons8.com/ios-filled/50/999999/company.png",
@@ -469,17 +473,17 @@ const ProfileSection = () => {
 											{
 												name: "Bolt",
 												subtitle: "AI coding assistant",
-												logo: "https://img.icons8.com/color/48/lightning-bolt.png",
+												logo: "/bolt.jpg",
 											},
 											{
 												name: "Claude",
 												subtitle: "AI assistant by Anthropic",
-												logo: "https://img.icons8.com/color/48/artificial-intelligence.png",
+												logo: "/claude.svg",
 											},
 											{
 												name: "Tempo AI",
 												subtitle: "AI workflow automation",
-												logo: "https://img.icons8.com/color/48/time.png",
+												logo: "/tempo.svg",
 											},
 											{
 												name: "Cursor",
@@ -489,12 +493,12 @@ const ProfileSection = () => {
 											{
 												name: "v0 by Vercel",
 												subtitle: "AI UI generator",
-												logo: "https://img.icons8.com/color/48/v.png",
+												logo: "/vercel.svg",
 											},
 											{
 												name: "Replit",
 												subtitle: "AI-powered coding platform",
-												logo: "https://img.icons8.com/color/48/code.png",
+												logo: "/replit.svg",
 											},
 											{
 												name: "GitHub Copilot",
@@ -504,57 +508,29 @@ const ProfileSection = () => {
 											{
 												name: "Bubble",
 												subtitle: "No-code app builder",
-												logo: "https://img.icons8.com/color/48/bubble.png",
+												logo: "/bubble.svg",
 											},
 											{
 												name: "Webflow",
 												subtitle: "Visual web development",
-												logo: "https://img.icons8.com/color/48/webflow.png",
+												logo: "/webflow.svg",
 											},
 
-											{
-												name: "Airtable",
-												subtitle: "No-code database platform",
-												logo: "https://img.icons8.com/color/48/airtable.png",
-											},
-
-											{
-												name: "Make (Integromat)",
-												subtitle: "Visual automation platform",
-												logo: "https://img.icons8.com/color/48/automation.png",
-											},
-											{
-												name: "Retool",
-												subtitle: "Low-code app builder",
-												logo: "https://img.icons8.com/color/48/wrench.png",
-											},
+											
 
 											{
 												name: "Midjourney",
 												subtitle: "AI image generation",
 												logo: "/skills/midjourney.png",
 											},
-											{
-												name: "Stable Diffusion",
-												subtitle: "Open source AI art",
-												logo: "https://img.icons8.com/color/48/artificial-intelligence.png",
-											},
-											{
-												name: "RunwayML",
-												subtitle: "AI creative tools",
-												logo: "https://img.icons8.com/color/48/runway.png",
-											},
-											{
-												name: "Hugging Face",
-												subtitle: "AI model hub",
-												logo: "https://img.icons8.com/color/48/hugging-face.png",
-											},
+											
+											// {
+											// 	name: "Hugging Face",
+											// 	subtitle: "AI model hub",
+											// 	logo: "https://img.icons8.com/color/48/hugging-face.png",
+											// },
 
-											{
-												name: "Pinecone",
-												subtitle: "Vector database for AI",
-												logo: "https://img.icons8.com/color/48/pine-tree.png",
-											},
+											
 										].map((tool, idx) => (
 											<div
 												key={tool.name}
